@@ -5,7 +5,7 @@ namespace Juniyasyos\FilamentSettingsHub\Services\Contracts;
 use Filament\Resources\Pages\Page;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cookie;
-use TomatoPHP\TomatoAdmin\Facade\TomatoWidget as TomatoWidgetFacade;
+use Juniyasyos\TomatoAdmin\Facade\TomatoWidget as TomatoWidgetFacade;
 use Modules\TomatoSettings\App\Facades\TomatoSettings;
 
 class SettingHold

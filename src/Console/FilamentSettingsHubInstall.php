@@ -4,7 +4,7 @@ namespace Juniyasyos\FilamentSettingsHub\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
-use TomatoPHP\ConsoleHelpers\Traits\RunCommand;
+use Juniyasyos\ConsoleHelpers\Traits\RunCommand;
 
 class FilamentSettingsHubInstall extends Command
 {

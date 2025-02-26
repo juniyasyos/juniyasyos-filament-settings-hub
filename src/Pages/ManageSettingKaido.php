@@ -2,9 +2,9 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Pages;
 
-use TomatoPHP\FilamentSettingsHub\Settings\KaidoSetting;
+use Juniyasyos\FilamentSettingsHub\Settings\KaidoSetting;
 // use BezhanSalleh\FilamentShield\Traits\HasPageShield;
-use TomatoPHP\FilamentSettingsHub\Traits\UseShield;
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;

@@ -12,8 +12,8 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Pages\Actions\ButtonAction;
 use Filament\Forms\Components\FileUpload;
-use TomatoPHP\FilamentSettingsHub\Settings\SitesSettings;
-use TomatoPHP\FilamentSettingsHub\Traits\UseShield;
+use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 
 
 class LocationSettings extends SettingsPage

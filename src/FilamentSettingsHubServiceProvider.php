@@ -3,9 +3,9 @@
 namespace Juniyasyos\FilamentSettingsHub;
 
 use Illuminate\Support\ServiceProvider;
-use TomatoPHP\FilamentSettingsHub\Facades\FilamentSettingsHub;
-use TomatoPHP\FilamentSettingsHub\Services\Contracts\SettingHold;
-use TomatoPHP\FilamentSettingsHub\Services\SettingHolderHandler;
+use Juniyasyos\FilamentSettingsHub\Facades\FilamentSettingsHub;
+use Juniyasyos\FilamentSettingsHub\Services\Contracts\SettingHold;
+use Juniyasyos\FilamentSettingsHub\Services\SettingHolderHandler;
 
 require_once __DIR__.'/helpers.php';
 

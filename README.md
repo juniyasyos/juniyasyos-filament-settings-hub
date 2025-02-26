@@ -54,8 +54,8 @@ settings($key);
 to register new setting to the hub page you can use Facade class on your provider like this
 
 ```php
-use TomatoPHP\FilamentSettingsHub\Facades\FilamentSettingsHub;
-use TomatoPHP\FilamentSettingsHub\Services\Contracts\SettingHold;
+use Juniyasyos\FilamentSettingsHub\Facades\FilamentSettingsHub;
+use Juniyasyos\FilamentSettingsHub\Services\Contracts\SettingHold;
 
 FilamentSettingsHub::register([
     SettingHold::make()
@@ -94,7 +94,7 @@ to allow [filament-shield](https://github.com/bezhanSalleh/filament-shield) for 
 to make a secure setting page just use this trait 
 
 ```php
-use TomatoPHP\FilamentSettingsHub\Traits\UseShield;
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 ```
 
 ## Publish Assets

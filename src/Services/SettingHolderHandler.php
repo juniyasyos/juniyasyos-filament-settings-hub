@@ -3,8 +3,8 @@
 namespace Juniyasyos\FilamentSettingsHub\Services;
 
 use Illuminate\Support\Collection;
-use TomatoPHP\FilamentSettingsHub\Facades\FilamentSettingsHub;
-use TomatoPHP\FilamentSettingsHub\Services\Contracts\SettingHold;
+use Juniyasyos\FilamentSettingsHub\Facades\FilamentSettingsHub;
+use Juniyasyos\FilamentSettingsHub\Services\Contracts\SettingHold;
 
 class SettingHolderHandler
 {

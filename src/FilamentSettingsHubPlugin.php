@@ -8,13 +8,13 @@ use Filament\Support\Concerns\EvaluatesClosures;
 use Illuminate\View\View;
 use Kenepa\TranslationManager\Http\Middleware\SetLanguage;
 use Nwidart\Modules\Module;
-use TomatoPHP\FilamentSettingsHub\Facades\FilamentSettingsHub;
-use TomatoPHP\FilamentSettingsHub\Pages\LocationSettings;
-use TomatoPHP\FilamentSettingsHub\Pages\ManageSettingKaido;
-use TomatoPHP\FilamentSettingsHub\Pages\SettingsHub;
-use TomatoPHP\FilamentSettingsHub\Pages\SiteSettings;
-use TomatoPHP\FilamentSettingsHub\Pages\SocialMenuSettings;
-use TomatoPHP\FilamentSettingsHub\Services\Contracts\SettingHold;
+use Juniyasyos\FilamentSettingsHub\Facades\FilamentSettingsHub;
+use Juniyasyos\FilamentSettingsHub\Pages\LocationSettings;
+use Juniyasyos\FilamentSettingsHub\Pages\ManageSettingKaido;
+use Juniyasyos\FilamentSettingsHub\Pages\SettingsHub;
+use Juniyasyos\FilamentSettingsHub\Pages\SiteSettings;
+use Juniyasyos\FilamentSettingsHub\Pages\SocialMenuSettings;
+use Juniyasyos\FilamentSettingsHub\Services\Contracts\SettingHold;
 
 
 class FilamentSettingsHubPlugin implements Plugin

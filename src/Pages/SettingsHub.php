@@ -4,7 +4,7 @@ namespace Juniyasyos\FilamentSettingsHub\Pages;
 
 
 use Filament\Pages\Page;
-use TomatoPHP\FilamentSettingsHub\Traits\UseShield;
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 
 class SettingsHub extends Page
 {

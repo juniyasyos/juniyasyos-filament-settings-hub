@@ -3,7 +3,7 @@
 namespace Juniyasyos\FilamentSettingsHub\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use TomatoPHP\FilamentSettingsHub\Services\Contracts\SettingHold;
+use Juniyasyos\FilamentSettingsHub\Services\Contracts\SettingHold;
 
 /**
  *  @method static \Illuminate\Support\Collection get()
