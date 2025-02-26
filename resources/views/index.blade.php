@@ -1,6 +1,6 @@
 <x-filament-panels::page>
     @php
-        $settings = \TomatoPHP\FilamentSettingsHub\Facades\FilamentSettingsHub::load()->sortBy('order')->groupBy('group');
+        $settings = \Juniyasyos\FilamentSettingsHub\Facades\FilamentSettingsHub::load()->sortBy('order')->groupBy('group');
         $tenant = \Filament\Facades\Filament::getTenant();
     @endphp
 

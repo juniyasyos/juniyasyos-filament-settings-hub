@@ -10,7 +10,7 @@
     "keywords": [],
     "priority": 0,
     "providers": [
-        "TomatoPHP\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider"
+        "Juniyasyos\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider"
     ],
     "files": [],
     "title": {

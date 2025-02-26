@@ -36,7 +36,7 @@ finally reigster the plugin on `/app/Providers/Filament/AdminPanelProvider.php`
 
 ```php
 ->plugin(
-    \TomatoPHP\FilamentSettingsHub\FilamentSettingsHubPlugin::make()
+    \Juniyasyos\FilamentSettingsHub\FilamentSettingsHubPlugin::make()
         ->allowLocationSettings()
         ->allowSiteSettings()
         ->allowSocialMenuSettings()
@@ -63,7 +63,7 @@ FilamentSettingsHub::register([
         ->label('Site Settings') // to translate label just use direct translation path like `messages.text.name`
         ->icon('heroicon-o-globe-alt')
         ->route('filament.admin.pages.site-settings') // use page / route
-        ->page(\TomatoPHP\FilamentSettingsHub\Pages\SiteSettings::class) // use page / route 
+        ->page(\Juniyasyos\FilamentSettingsHub\Pages\SiteSettings::class) // use page / route 
         ->description('Name, Logo, Site Profile') // to translate label just use direct translation path like `messages.text.name`
         ->group('General') // to translate label just use direct translation path like `messages.text.name`,
 ]);
@@ -86,7 +86,7 @@ to allow [filament-shield](https://github.com/bezhanSalleh/filament-shield) for 
 
 ```php
 ->plugin(
-    \TomatoPHP\FilamentSettingsHub\FilamentSettingsHubPlugin::make()
+    \Juniyasyos\FilamentSettingsHub\FilamentSettingsHubPlugin::make()
         ->allowShield()
 )
 ```

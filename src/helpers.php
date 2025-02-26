@@ -5,7 +5,7 @@ try {
     if (!function_exists('setting')) {
         function setting($key)
         {
-            return \TomatoPHP\FilamentSettingsHub\Models\Setting::where('name', $key)->first('payload') ? \TomatoPHP\FilamentSettingsHub\Models\Setting::where('name', $key)->first('payload')->payload : false;
+            return \Juniyasyos\FilamentSettingsHub\Models\Setting::where('name', $key)->first('payload') ? \Juniyasyos\FilamentSettingsHub\Models\Setting::where('name', $key)->first('payload')->payload : false;
         }
     }
     if (!function_exists('dollar')) {

@@ -15,7 +15,7 @@ class FilamentSettingsHubServiceProvider extends ServiceProvider
     {
         //Register generate command
         $this->commands([
-           \TomatoPHP\FilamentSettingsHub\Console\FilamentSettingsHubInstall::class,
+           \Juniyasyos\FilamentSettingsHub\Console\FilamentSettingsHubInstall::class,
         ]);
 
         //Register Config file

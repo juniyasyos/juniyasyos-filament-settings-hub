@@ -8,7 +8,7 @@ use Juniyasyos\FilamentSettingsHub\Services\Contracts\SettingHold;
 /**
  *  @method static \Illuminate\Support\Collection get()
  * @method static \Illuminate\Support\Collection load()
- * @method static \TomatoPHP\FilamentSettingsHub\Services\SettingHolderHandler register(array|SettingHold $item)
+ * @method static \Juniyasyos\FilamentSettingsHub\Services\SettingHolderHandler register(array|SettingHold $item)
  */
 class FilamentSettingsHub extends Facade
 {
