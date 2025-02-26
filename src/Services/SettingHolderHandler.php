@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Services;
+namespace Juniyasyos\FilamentSettingsHub\Services;
 
 use Illuminate\Support\Collection;
 use TomatoPHP\FilamentSettingsHub\Facades\FilamentSettingsHub;

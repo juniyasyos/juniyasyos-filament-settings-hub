@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Models;
+namespace Juniyasyos\FilamentSettingsHub\Models;
 
 use GeneaLabs\LaravelModelCaching\CachedModel;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;

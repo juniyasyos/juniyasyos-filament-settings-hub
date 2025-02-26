@@ -1,5 +1,5 @@
 {
-    "name": "tomatophp/filament-settings-hub",
+    "name": "juniyasyos/filament-settings-hub-kaido",
     "type": "library",
     "description": "Manage your Filament app settings with GUI and helpers",
     "keywords": [
@@ -8,12 +8,13 @@
         "settings",
         "filament",
         "tomatophp",
+        "juniyasyos",
         "spatie-integrations"
     ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TomatoPHP\\FilamentSettingsHub\\": "src/"
+            "Juniyasyos\\FilamentSettingsHub\\": "src/"
         }
     },
     "autoload-dev": {
@@ -24,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "TomatoPHP\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider"
+                "Juniyasyos\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider"
             ]
         }
     },

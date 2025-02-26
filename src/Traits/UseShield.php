@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Traits;
+namespace Juniyasyos\FilamentSettingsHub\Traits;
 
 use BezhanSalleh\FilamentShield\Support\Utils;
 use Filament\Facades\Filament;

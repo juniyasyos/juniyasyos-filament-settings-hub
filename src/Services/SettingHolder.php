@@ -1,8 +1,8 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Services\Services;
+namespace Juniyasyos\FilamentSettingsHub\Services\Services;
 
-namespace TomatoPHP\FilamentSettingsHub\Facades\TomatoSettings;
+namespace Juniyasyos\FilamentSettingsHub\Facades\TomatoSettings;
 
 use Illuminate\Support\Facades\Route;
 

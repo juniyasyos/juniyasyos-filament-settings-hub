@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub;
+namespace Juniyasyos\FilamentSettingsHub;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;

@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Services\Contracts;
+namespace Juniyasyos\FilamentSettingsHub\Services\Contracts;
 
 use Filament\Resources\Pages\Page;
 use Illuminate\Support\Collection;

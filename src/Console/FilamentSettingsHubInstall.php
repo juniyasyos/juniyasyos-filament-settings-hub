@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Console;
+namespace Juniyasyos\FilamentSettingsHub\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;

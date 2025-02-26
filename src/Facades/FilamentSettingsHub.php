@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Facades;
+namespace Juniyasyos\FilamentSettingsHub\Facades;
 
 use Illuminate\Support\Facades\Facade;
 use TomatoPHP\FilamentSettingsHub\Services\Contracts\SettingHold;

@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Settings;
+namespace Juniyasyos\FilamentSettingsHub\Settings;
 
 use Spatie\LaravelSettings\Settings;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentSettingsHub\Pages;
+namespace Juniyasyos\FilamentSettingsHub\Pages;
 
 use TomatoPHP\FilamentSettingsHub\Settings\KaidoSetting;
 // use BezhanSalleh\FilamentShield\Traits\HasPageShield;
