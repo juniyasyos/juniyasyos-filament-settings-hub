@@ -21,6 +21,12 @@ class ManageSettingKaido extends SettingsPage
 
     protected static string $settings = KaidoSetting::class;
 
+    public static function shouldRegisterNavigation(): bool
+    {
+        return false;
+    }
+
+
     public function form(Form $form): Form
     {
         return $form
