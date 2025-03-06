@@ -25,7 +25,7 @@ class FilamentSettingsHubPlugin implements Plugin
     public static bool|\Closure $allowSocialMenuSettings = true;
     public static bool|\Closure $allowLocationSettings = true;
     public static bool|\Closure $allowKaidoSettings = true;
-    public static bool|\Closure $allowShield = false;
+    public static bool|\Closure $allowShield = true;
 
     private bool $isActive = false;
 
@@ -135,7 +135,8 @@ class FilamentSettingsHubPlugin implements Plugin
                     ->order(1)
                     ->label('filament-settings-hub::messages.settings.site.title')
                     ->icon('heroicon-o-globe-alt')
-                    ->description('filament-settings-hub::messages.settings.site.description');
+                    ->description('filament-settings-hub::messages.settings.site.description')
+                    ->group('filament-settings-hub::messages.group');
             }
 
             if ($this->isSocialMenuSettingAllowed()) {
@@ -144,7 +145,8 @@ class FilamentSettingsHubPlugin implements Plugin
                     ->order(2)
                     ->label('filament-settings-hub::messages.settings.social.title')
                     ->icon('heroicon-s-bars-3')
-                    ->description('filament-settings-hub::messages.settings.social.description');
+                    ->description('filament-settings-hub::messages.settings.social.description')
+                    ->group('filament-settings-hub::messages.group');
             }
 
             if ($this->isLocationSettingAllowed()) {
@@ -153,7 +155,8 @@ class FilamentSettingsHubPlugin implements Plugin
                     ->order(3)
                     ->label('filament-settings-hub::messages.settings.location.title')
                     ->icon('heroicon-o-map')
-                    ->description('filament-settings-hub::messages.settings.location.description');
+                    ->description('filament-settings-hub::messages.settings.location.description')
+                    ->group('filament-settings-hub::messages.group');
             }
 
 
@@ -163,7 +166,8 @@ class FilamentSettingsHubPlugin implements Plugin
                     ->order(4)
                     ->label('filament-settings-hub::messages.settings.login.title')
                     ->icon('heroicon-o-arrow-right-end-on-rectangle')
-                    ->description('filament-settings-hub::messages.settings.login.description');
+                    ->description('filament-settings-hub::messages.settings.login.description')
+                    ->group('filament-settings-hub::messages.group');
             }
 
 
