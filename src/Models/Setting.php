@@ -9,7 +9,7 @@ class Setting extends CachedModel
 {
     use Cachable;
 
-    protected $cachePrefix = "tomato_settings_";
+    protected $cachePrefix = "juniyasyos_settings_";
 
     protected $table = 'settings';
 
