@@ -41,15 +41,16 @@ return [
                 'site_language' => 'Default Language',
             ],
         ],
-        'login' => [
+        'authentication' => [
             'title' => 'Authentication Settings',
             'description' => 'Configure login and authentication options.',
             'form' => [
-                'site_address' => 'Full Address',
-                'site_phone_code' => 'Phone Code',
-                'site_location' => 'Physical Location',
-                'site_currency' => 'Preferred Currency',
-                'site_language' => 'Default Language',
+                'section_title' => 'Site Information',
+                'site_name' => 'Site Name',
+                'site_active' => 'Site Active',
+                'registration_enabled' => 'Registration Enabled',
+                'password_reset_enabled' => 'Password Reset Enabled',
+                'sso_enabled' => 'SSO Enabled',
             ],
         ],
     ],
