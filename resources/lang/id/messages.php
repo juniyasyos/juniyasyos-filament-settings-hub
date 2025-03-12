@@ -41,15 +41,16 @@ return [
                 'site_language' => 'Bahasa Utama Situs',
             ],
         ],
-        'login' => [
+        'authentication' => [
             'title' => 'Pengaturan Login',
-            'description' => 'Atur opsi login dan autentikasi dengan mudah.',
+            'description' => 'Sesuaikan opsi login dan autentikasi dengan mudah.',
             'form' => [
-                'site_address' => 'Alamat Lengkap',
-                'site_phone_code' => 'Kode Telepon',
-                'site_location' => 'Lokasi Fisik',
-                'site_currency' => 'Mata Uang yang Digunakan',
-                'site_language' => 'Bahasa Utama Situs',
+                'section_title' => 'Informasi Situs',
+                'site_name' => 'Nama Situs',
+                'site_active' => 'Status Situs',
+                'registration_enabled' => 'Pendaftaran Pengguna',
+                'password_reset_enabled' => 'Reset Password',
+                'sso_enabled' => 'Login dengan SSO',
             ],
         ],
     ],
