@@ -1,7 +1,7 @@
 {
     "name": "juniyasyos/filament-settings-hub-kaido",
     "type": "library",
-    "description": "Manage your Filament app settings with GUI and helpers, This plugin is built on top of Spatie's Laravel-backup package",
+    "description": "Manage your Filament app settings with GUI and helpers",
     "keywords": [
         "php",
         "laravel",
@@ -9,16 +9,12 @@
         "filament",
         "tomatophp",
         "juniyasyos",
-        "spatie-integrations",
-        "laravel-backup",
-        "filament-backup"
+        "spatie-integrations"
     ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Juniyasyos\\FilamentSettingsHub\\": "src/",
-            "Juniyasyos\\FilamentLaravelBackup\\": "src",
-            "Juniyasyos\\FilamentLaravelBackup\\Tests\\": "tests"
+            "Juniyasyos\\FilamentSettingsHub\\": "src/"
         }
     },
     "autoload-dev": {
@@ -26,23 +22,10 @@
             "Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "format": "vendor/bin/pint"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
-    },
     "extra": {
         "laravel": {
             "providers": [
-                "Juniyasyos\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider",
-                "Juniyasyos\\FilamentLaravelBackup\\FilamentLaravelBackupServiceProvider"
+                "Juniyasyos\\FilamentSettingsHub\\FilamentSettingsHubServiceProvider"
             ]
         }
     },
@@ -50,10 +33,6 @@
         {
             "name": "Fady Mondy",
             "email": "info@3x1.io"
-        },
-        {
-            "name": "Shuvro Roy",
-            "email": "shuvro.nsu.cse@gmail.com"
         },
         {
             "name": "Ahmad Ilyas",
@@ -67,23 +46,6 @@
         "filament/notifications": "^3.0.0",
         "filament/spatie-laravel-settings-plugin": "^3.2",
         "genealabs/laravel-model-caching": "^11.0",
-        "spatie/laravel-sitemap": "^7.2",
-        "calebporzio/sushi": "^2.4",
-        "spatie/laravel-backup": "^8.0|^9.0",
-        "spatie/laravel-package-tools": "^1.15"
-    },
-    "require-dev": {
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^8.1.1||^7.10.0",
-        "larastan/larastan": "^2.9",
-        "orchestra/testbench": "^9.0.0||^8.22.0",
-        "pestphp/pest": "^2.0||^3.0",
-        "pestphp/pest-plugin-arch": "^2.0||^3.0",
-        "pestphp/pest-plugin-laravel": "^2.0||^3.0",
-        "phpstan/extension-installer": "^1.3",
-        "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+        "spatie/laravel-sitemap": "^7.2"
+    }
 }
