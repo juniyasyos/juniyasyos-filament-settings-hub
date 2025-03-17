@@ -8,9 +8,9 @@
 
     @foreach ($settings as $settingGroup => $setting)
         <div class="fi-page">
-            <h1 class="fi-header filament-header-heading">
+            {{-- <h1 class="fi-header filament-header-heading">
                 {{ str($settingGroup)->contains(['.', '::']) ? trans($settingGroup) : $settingGroup }}
-            </h1>
+            </h1> --}}
             
             <!-- Section: Anak langsung dari .fi-page agar mendapatkan gap-y-6 -->
             <section class="pt-6">
