@@ -161,9 +161,9 @@ class FilamentSettingsHubPlugin implements Plugin
                 $settings[] = SettingHold::make()
                     ->page(AuthenticationSettings::class)
                     ->order(4)
-                    ->label('filament-settings-hub::messages.settings.login.title')
+                    ->label('filament-settings-hub::messages.settings.authentication.title')
                     ->icon('heroicon-o-arrow-right-end-on-rectangle')
-                    ->description('filament-settings-hub::messages.settings.login.description');
+                    ->description('filament-settings-hub::messages.settings.authentication.description');
             }
 
             FilamentSettingsHub::register($settings);

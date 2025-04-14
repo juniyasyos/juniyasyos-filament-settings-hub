@@ -26,7 +26,7 @@ class AuthenticationSettings extends SettingsPage
     public function form(Form $form): Form
     {
         return $form->schema([
-            Section::make(__('filament-settings-hub::messages.settings.authentication.section_title'))
+            Section::make(__('filament-settings-hub::messages.settings.authentication.form.section_title'))
                 ->columns(1)
                 ->schema([
                     TextInput::make('site_name')
