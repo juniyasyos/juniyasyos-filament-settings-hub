@@ -1,5 +1,7 @@
 <?php
 
+// resources/lang/en/filament-settings-hub.php
+
 return [
     'title' => 'System',
     'group' => 'Settings',
@@ -51,6 +53,10 @@ return [
                 'registration_enabled' => 'Registration Enabled',
                 'password_reset_enabled' => 'Password Reset Enabled',
                 'sso_enabled' => 'SSO Enabled',
+                'site_active_hint' => 'Enable or disable site activity.',
+                'registration_enabled_hint' => 'Allow users to register on your site.',
+                'password_reset_enabled_hint' => 'Allow users to reset their passwords.',
+                'sso_enabled_hint' => 'Enable Single Sign-On (SSO) authentication.',
             ],
         ],
     ],

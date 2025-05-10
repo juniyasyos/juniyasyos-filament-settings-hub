@@ -1,5 +1,7 @@
 <?php
 
+// resources/lang/id/filament-settings-hub.php
+
 return [
     'title' => 'Sistem',
     'group' => 'Pengaturan',
@@ -7,19 +9,19 @@ return [
     'settings' => [
         'site' => [
             'title' => 'Pengaturan Situs',
-            'description' => 'Atur berbagai pengaturan situs dengan mudah di sini.',
+            'description' => 'Kelola pengaturan situs Anda dengan mudah di sini.',
             'form' => [
-                'site_name' => 'Nama Situs',
-                'site_description' => 'Deskripsi singkat tentang situs Anda',
-                'site_logo' => 'Unggah Logo Situs',
-                'site_profile' => 'Atur Gambar Profil untuk Situs',
+                'site_name' => 'Nama Website',
+                'site_description' => 'Deskripsi Singkat Website Anda',
+                'site_logo' => 'Unggah Logo Website Anda',
+                'site_profile' => 'Atur Gambar Profil untuk Website Anda',
                 'site_keywords' => 'Kata Kunci untuk SEO',
-                'site_email' => 'Email Resmi Situs',
-                'site_phone' => 'Nomor Kontak',
-                'site_author' => 'Pemilik atau Penulis Situs',
+                'site_email' => 'Email Resmi Website',
+                'site_phone' => 'Nomor Telepon Kontak',
+                'site_author' => 'Penulis Website',
             ],
-            'site-map' => 'Buat Peta Situs',
-            'site-map-notification' => 'Peta situs berhasil dibuat!',
+            'site-map' => 'Hasilkan Peta Situs',
+            'site-map-notification' => 'Peta Situs Berhasil Dihasilkan!',
         ],
         'social' => [
             'title' => 'Menu Media Sosial',
@@ -32,25 +34,29 @@ return [
         ],
         'location' => [
             'title' => 'Pengaturan Lokasi',
-            'description' => 'Sesuaikan detail lokasi untuk situs Anda.',
+            'description' => 'Sesuaikan detail lokasi website Anda.',
             'form' => [
                 'site_address' => 'Alamat Lengkap',
                 'site_phone_code' => 'Kode Telepon',
                 'site_location' => 'Lokasi Fisik',
-                'site_currency' => 'Mata Uang yang Digunakan',
-                'site_language' => 'Bahasa Utama Situs',
+                'site_currency' => 'Mata Uang yang Diinginkan',
+                'site_language' => 'Bahasa Default',
             ],
         ],
         'authentication' => [
-            'title' => 'Pengaturan Login',
-            'description' => 'Sesuaikan opsi login dan autentikasi dengan mudah.',
+            'title' => 'Pengaturan Autentikasi',
+            'description' => 'Atur opsi login dan autentikasi.',
             'form' => [
                 'section_title' => 'Informasi Situs',
                 'site_name' => 'Nama Situs',
-                'site_active' => 'Status Situs',
-                'registration_enabled' => 'Pendaftaran Pengguna',
-                'password_reset_enabled' => 'Reset Password',
-                'sso_enabled' => 'Login dengan SSO',
+                'site_active' => 'Aktifkan Situs',
+                'registration_enabled' => 'Registrasi Diaktifkan',
+                'password_reset_enabled' => 'Reset Kata Sandi Diaktifkan',
+                'sso_enabled' => 'SSO Diaktifkan',
+                'site_active_hint' => 'Aktifkan atau nonaktifkan aktivitas situs.',
+                'registration_enabled_hint' => 'Izinkan pengguna untuk mendaftar di situs Anda.',
+                'password_reset_enabled_hint' => 'Izinkan pengguna untuk mereset kata sandi mereka.',
+                'sso_enabled_hint' => 'Aktifkan autentikasi Single Sign-On (SSO).',
             ],
         ],
     ],
