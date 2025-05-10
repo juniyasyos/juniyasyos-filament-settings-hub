@@ -65,6 +65,6 @@
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
-        "genealabs/laravel-model-caching": "^11.0"
+        "genealabs/laravel-model-caching": "^12.0"
     }
 }
