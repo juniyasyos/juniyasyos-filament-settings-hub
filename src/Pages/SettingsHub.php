@@ -28,4 +28,9 @@ class SettingsHub extends Page
     {
         return trans('filament-settings-hub::messages.title');
     }
+
+    public static function getSlug(): string
+    {
+        return 'settings';
+    }
 }

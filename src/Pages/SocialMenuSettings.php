@@ -2,28 +2,29 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Pages;
 
-use BezhanSalleh\FilamentShield\Support\Utils;
-use Filament\Facades\Filament;
-use Filament\Notifications\Notification;
-use Filament\Pages\Actions\Action;
-use Filament\Pages\SettingsPage;
-use Filament\Forms\Components\Grid;
 use Illuminate\Support\Str;
-use Spatie\Permission\Models\Permission;
+use Filament\Facades\Filament;
+use Filament\Pages\SettingsPage;
+use Filament\Pages\Actions\Action;
+use Filament\Forms\Components\Grid;
 use Spatie\Sitemap\SitemapGenerator;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
 use Filament\Pages\Actions\ButtonAction;
+use Spatie\Permission\Models\Permission;
 use Filament\Forms\Components\FileUpload;
-use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
+use BezhanSalleh\FilamentShield\Support\Utils;
 use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
+use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
+use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
 
 
 class SocialMenuSettings extends SettingsPage
 {
-    use UseShield;
-
+    use UseShield, HasSettingsBreadcrumbs;
+    
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 
     protected static string $settings = SitesSettings::class;

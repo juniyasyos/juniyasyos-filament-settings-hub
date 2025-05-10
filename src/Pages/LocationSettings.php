@@ -2,23 +2,24 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Pages;
 
-use Filament\Notifications\Notification;
-use Filament\Pages\Actions\Action;
 use Filament\Pages\SettingsPage;
+use Filament\Pages\Actions\Action;
 use Filament\Forms\Components\Grid;
 use Spatie\Sitemap\SitemapGenerator;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
 use Filament\Pages\Actions\ButtonAction;
 use Filament\Forms\Components\FileUpload;
-use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
 use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
+use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
+use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
 
 
 class LocationSettings extends SettingsPage
 {
-    use UseShield;
+    use UseShield, HasSettingsBreadcrumbs;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 

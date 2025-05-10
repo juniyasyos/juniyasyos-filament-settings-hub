@@ -2,18 +2,19 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Pages;
 
-use Juniyasyos\FilamentSettingsHub\Settings\KaidoSetting;
-use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 use Filament\Forms;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
+use Juniyasyos\FilamentSettingsHub\Settings\KaidoSetting;
+use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
 
 class AuthenticationSettings extends SettingsPage
 {
-    use UseShield;
+    use UseShield, HasSettingsBreadcrumbs;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static string $settings = KaidoSetting::class;

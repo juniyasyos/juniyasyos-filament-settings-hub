@@ -2,15 +2,10 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Models;
 
-use GeneaLabs\LaravelModelCaching\CachedModel;
-use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+use Illuminate\Database\Eloquent\Model;
 
-class Setting extends CachedModel
+class Setting extends Model
 {
-    use Cachable;
-
-    protected $cachePrefix = "juniyasyos_settings_";
-
     protected $table = 'settings';
 
     protected $casts = [
