@@ -2,29 +2,19 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Pages;
 
-use Illuminate\Support\Str;
-use Filament\Facades\Filament;
-use Filament\Pages\SettingsPage;
-use Filament\Pages\Actions\Action;
 use Filament\Forms\Components\Grid;
-use Spatie\Sitemap\SitemapGenerator;
 use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Filament\Notifications\Notification;
-use Filament\Pages\Actions\ButtonAction;
-use Spatie\Permission\Models\Permission;
-use Filament\Forms\Components\FileUpload;
-use BezhanSalleh\FilamentShield\Support\Utils;
-use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
+use Filament\Pages\Actions\Action;
+use Filament\Pages\SettingsPage;
 use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
 use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
-
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 
 class SocialMenuSettings extends SettingsPage
 {
-    use UseShield, HasSettingsBreadcrumbs;
-    
+    use HasSettingsBreadcrumbs, UseShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 
     protected static string $settings = SitesSettings::class;
@@ -34,17 +24,28 @@ class SocialMenuSettings extends SettingsPage
         return trans('filament-settings-hub::messages.settings.social.title');
     }
 
+    public function mount(): void
+    {
+        parent::mount();
+
+        abort_unless(
+            config('filament-settings-hub.page_show.social_menu_setting', false),
+            403,
+            'Halaman ini tidak tersedia.'
+        );
+    }
+
     protected function getActions(): array
     {
         $tenant = \Filament\Facades\Filament::getTenant();
-        if($tenant){
+        if ($tenant) {
             return [
-                Action::make('back')->action(fn()=> redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
+                Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
             ];
         }
 
         return [
-            Action::make('back')->action(fn()=> redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
+            Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
         ];
     }
 
@@ -63,8 +64,8 @@ class SocialMenuSettings extends SettingsPage
                         TextInput::make('vendor')->label(trans('filament-settings-hub::messages.settings.social.form.vendor')),
                         TextInput::make('link')->url()->label(trans('filament-settings-hub::messages.settings.social.form.link')),
                     ])
-                    ->hint(config('filament-settings-hub.show_hint') ?'setting("site_social")': null),
-            ])
+                    ->hint(config('filament-settings-hub.show_hint') ? 'setting("site_social")' : null),
+            ]),
 
         ];
     }

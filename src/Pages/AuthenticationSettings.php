@@ -2,27 +2,38 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Pages;
 
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Pages\SettingsPage;
-use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
+use Filament\Forms\Form;
+use Filament\Pages\SettingsPage;
 use Juniyasyos\FilamentSettingsHub\Settings\KaidoSetting;
 use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 
 class AuthenticationSettings extends SettingsPage
 {
-    use UseShield, HasSettingsBreadcrumbs;
+    use HasSettingsBreadcrumbs, UseShield;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
+
     protected static string $settings = KaidoSetting::class;
 
     public static function shouldRegisterNavigation(): bool
     {
         return false;
+    }
+
+    public function mount(): void
+    {
+        parent::mount();
+
+        abort_unless(
+            config('filament-settings-hub.page_show.auth', false),
+            403,
+            'Halaman ini tidak tersedia.'
+        );
     }
 
     public function form(Form $form): Form
@@ -55,7 +66,7 @@ class AuthenticationSettings extends SettingsPage
                                 ->label(__('filament-settings-hub::messages.settings.authentication.form.sso_enabled'))
                                 ->helperText(__('filament-settings-hub::messages.settings.authentication.form.sso_enabled_hint')),
                         ])
-                        ->collapsible(), 
+                        ->collapsible(),
                 ]),
         ]);
     }

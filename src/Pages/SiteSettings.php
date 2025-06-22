@@ -2,24 +2,21 @@
 
 namespace Juniyasyos\FilamentSettingsHub\Pages;
 
-use Filament\Pages\SettingsPage;
-use Filament\Pages\Actions\Action;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
-use Spatie\Sitemap\SitemapGenerator;
-use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
-use Filament\Pages\Actions\ButtonAction;
-use Filament\Forms\Components\FileUpload;
-use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
+use Filament\Pages\Actions\Action;
+use Filament\Pages\SettingsPage;
 use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
 use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
-
+use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
+use Spatie\Sitemap\SitemapGenerator;
 
 class SiteSettings extends SettingsPage
 {
-    use UseShield, HasSettingsBreadcrumbs;
+    use HasSettingsBreadcrumbs, UseShield;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 
@@ -28,6 +25,17 @@ class SiteSettings extends SettingsPage
     public static function shouldRegisterNavigation(): bool
     {
         return false;
+    }
+
+    public function mount(): void
+    {
+        parent::mount();
+
+        abort_unless(
+            config('filament-settings-hub.page_show.site_setting', false),
+            403,
+            'Halaman ini tidak tersedia.'
+        );
     }
 
     public function getTitle(): string
@@ -42,21 +50,20 @@ class SiteSettings extends SettingsPage
             return [
                 Action::make('sitemap')
                     ->requiresConfirmation()
-                    ->action(fn() => $this->generateSitemap())
+                    ->action(fn () => $this->generateSitemap())
                     ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
-                Action::make('back')->action(fn() => redirect()->route('filament.' . filament()->getCurrentPanel()->getId() . '.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
+                Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
             ];
         }
 
         return [
             Action::make('sitemap')
                 ->requiresConfirmation()
-                ->action(fn() => $this->generateSitemap())
+                ->action(fn () => $this->generateSitemap())
                 ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
-            Action::make('back')->action(fn() => redirect()->route('filament.' . filament()->getCurrentPanel()->getId() . '.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
+            Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
         ];
     }
-
 
     public function generateSitemap()
     {
@@ -107,7 +114,7 @@ class SiteSettings extends SettingsPage
                 TextInput::make('site_email')
                     ->label(trans('filament-settings-hub::messages.settings.site.form.site_email'))
                     ->hint(config('filament-settings-hub.show_hint') ? 'setting("site_email")' : null),
-            ])
+            ]),
         ];
     }
 }
