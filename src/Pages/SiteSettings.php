@@ -43,27 +43,27 @@ class SiteSettings extends SettingsPage
         return trans('filament-settings-hub::messages.settings.site.title');
     }
 
-    protected function getActions(): array
-    {
-        $tenant = \Filament\Facades\Filament::getTenant();
-        if ($tenant) {
-            return [
-                Action::make('sitemap')
-                    ->requiresConfirmation()
-                    ->action(fn () => $this->generateSitemap())
-                    ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
-                Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
-            ];
-        }
+    // protected function getActions(): array
+    // {
+    //     $tenant = \Filament\Facades\Filament::getTenant();
+    //     if ($tenant) {
+    //         return [
+    //             Action::make('sitemap')
+    //                 ->requiresConfirmation()
+    //                 ->action(fn () => $this->generateSitemap())
+    //                 ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
+    //             Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
+    //         ];
+    //     }
 
-        return [
-            Action::make('sitemap')
-                ->requiresConfirmation()
-                ->action(fn () => $this->generateSitemap())
-                ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
-            Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
-        ];
-    }
+    //     return [
+    //         Action::make('sitemap')
+    //             ->requiresConfirmation()
+    //             ->action(fn () => $this->generateSitemap())
+    //             ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
+    //         Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
+    //     ];
+    // }
 
     public function generateSitemap()
     {
