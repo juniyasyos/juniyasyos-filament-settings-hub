@@ -7,7 +7,6 @@ use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
-use Filament\Pages\Actions\Action;
 use Filament\Pages\SettingsPage;
 use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
 use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
@@ -16,7 +15,8 @@ use Spatie\Sitemap\SitemapGenerator;
 
 class SiteSettings extends SettingsPage
 {
-    use HasSettingsBreadcrumbs, UseShield;
+    use HasSettingsBreadcrumbs;
+    use UseShield;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 
@@ -43,29 +43,7 @@ class SiteSettings extends SettingsPage
         return trans('filament-settings-hub::messages.settings.site.title');
     }
 
-    // protected function getActions(): array
-    // {
-    //     $tenant = \Filament\Facades\Filament::getTenant();
-    //     if ($tenant) {
-    //         return [
-    //             Action::make('sitemap')
-    //                 ->requiresConfirmation()
-    //                 ->action(fn () => $this->generateSitemap())
-    //                 ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
-    //             Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
-    //         ];
-    //     }
-
-    //     return [
-    //         Action::make('sitemap')
-    //             ->requiresConfirmation()
-    //             ->action(fn () => $this->generateSitemap())
-    //             ->label(trans('filament-settings-hub::messages.settings.site.site-map')),
-    //         Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
-    //     ];
-    // }
-
-    public function generateSitemap()
+    public function generateSitemap(): void
     {
         SitemapGenerator::create(config('app.url'))->writeToFile(public_path('sitemap.xml'));
 

@@ -5,7 +5,6 @@ namespace Juniyasyos\FilamentSettingsHub\Pages;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Filament\Pages\Actions\Action;
 use Filament\Pages\SettingsPage;
 use Juniyasyos\FilamentSettingsHub\Settings\SitesSettings;
 use Juniyasyos\FilamentSettingsHub\Traits\HasSettingsBreadcrumbs;
@@ -13,7 +12,8 @@ use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 
 class LocationSettings extends SettingsPage
 {
-    use HasSettingsBreadcrumbs, UseShield;
+    use HasSettingsBreadcrumbs;
+    use UseShield;
 
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 
@@ -34,21 +34,6 @@ class LocationSettings extends SettingsPage
             'Halaman ini tidak tersedia.'
         );
     }
-
-    // protected function getActions(): array
-    // {
-    //     $tenant = \Filament\Facades\Filament::getTenant();
-    //     if ($tenant) {
-    //         return [
-    //             Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub', $tenant))->color('danger')->label(trans('filament-settings-hub::messages.back')),
-    //         ];
-    //     }
-
-    //     return [
-    //         Action::make('back')->action(fn () => redirect()->route('filament.'.filament()->getCurrentPanel()->getId().'.pages.settings-hub'))->color('danger')->label(trans('filament-settings-hub::messages.back')),
-    //     ];
-
-    // }
 
     public function getTitle(): string
     {
