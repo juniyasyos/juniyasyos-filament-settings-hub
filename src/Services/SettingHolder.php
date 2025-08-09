@@ -1,10 +1,9 @@
 <?php
 
-namespace Juniyasyos\FilamentSettingsHub\Services\Services;
+namespace Juniyasyos\FilamentSettingsHub\Services;
 
-namespace Juniyasyos\FilamentSettingsHub\Facades\TomatoSettings;
-
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Collection;
+use Juniyasyos\FilamentSettingsHub\Facades\TomatoSettings;
 
 class SettingHolder
 {
