@@ -49,9 +49,9 @@
     "require": {
         "php": "^8.2|^8.3|^8.4",
         "tomatophp/console-helpers": "^1.1",
-        "filament/filament": "^3.3",
-        "filament/notifications": "^3.3",
-        "filament/spatie-laravel-settings-plugin": "^3.3",
+        "filament/filament": "^3.3.35",
+        "filament/notifications": "^3.3.35",
+        "filament/spatie-laravel-settings-plugin": "^3.3.35",
         "spatie/laravel-sitemap": "^7.3"
     },
     "require-dev": {
@@ -66,5 +66,11 @@
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
         "genealabs/laravel-model-caching": "^12.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     }
 }
