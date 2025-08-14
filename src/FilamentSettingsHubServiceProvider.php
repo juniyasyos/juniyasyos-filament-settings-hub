@@ -30,9 +30,12 @@ class FilamentSettingsHubServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         //Publish Migrations
-        $this->publishes([
-           __DIR__.'/../database/migrations' => database_path('migrations'),
-        ], 'filament-settings-hub-migrations');
+        if (! class_exists('SitesSettings')) {
+            $timestamp = date('Y_m_d_His', time());
+            $this->publishes([
+               __DIR__.'/../database/migrations/sites_settings.php.stub' => database_path('migrations/'.$timestamp.'_sites_settings.php'),
+            ], 'filament-settings-hub-migrations');
+        }
         //Register views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'filament-settings-hub');
 

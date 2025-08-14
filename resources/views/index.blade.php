@@ -8,7 +8,7 @@
 
     @foreach ($settings as $settingGroup => $setting)
         <div class="fi-page">
-            <h2 class="text-xl font-bold text-gray-900 dark:text-white">
+            <h2 class="text-xl font-bold">
                 {{ str($settingGroup)->contains(['.', '::']) ? trans($settingGroup) : $settingGroup }}
             </h2>
 
@@ -39,20 +39,20 @@
                     @endphp
 
                     @if ($canAccess && ($routeUrl || $pageUrl))
-                        <a href="{{ $routeUrl ?? $pageUrl }}" class="fi-section rounded-xl p-6 bg-white dark:fi-section-content ring-1 ring-gray-200 dark:ring-gray-700 transition hover:bg-gray-50 dark:hover:bg-gray-900">
+                        <a href="{{ $routeUrl ?? $pageUrl }}" class="fi-section">
                             <div class="flex items-start gap-4">
                                 <div class="p-2">
                                     @if (isset($item->icon))
-                                        <x-icon name="{{ $item->icon }}" class="w-10 h-10 text-gray-800 dark:text-gray-200" style="color: {{ $item->color ?? 'inherit' }}" />
+                                        <x-icon name="{{ $item->icon }}" class="w-10 h-10" style="color: {{ $item->color ?? 'inherit' }}" />
                                     @else
-                                        <x-heroicon-s-cog class="w-10 h-10 text-gray-800 dark:text-gray-200" />
+                                        <x-heroicon-s-cog class="w-10 h-10" />
                                     @endif
                                 </div>
                                 <div class="text-left">
-                                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">
+                                    <h3 class="text-lg font-bold">
                                         {{ str($item->label)->contains(['.', '::']) ? trans($item->label) : $item->label }}
                                     </h3>
-                                    <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                                    <p class="mt-1 text-sm">
                                         {{ str($item->description)->contains(['.', '::']) ? trans($item->description) : $item->description }}
                                     </p>
                                 </div>
