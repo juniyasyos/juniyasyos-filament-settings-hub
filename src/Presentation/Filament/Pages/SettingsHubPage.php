@@ -7,7 +7,7 @@ namespace Juniyasyos\FilamentSettingsHub\Presentation\Filament\Pages;
 use Filament\Pages\Page;
 use Juniyasyos\FilamentSettingsHub\Traits\UseShield;
 
-class SettingsHub extends Page
+class SettingsHubPage extends Page
 {
     use UseShield;
 
